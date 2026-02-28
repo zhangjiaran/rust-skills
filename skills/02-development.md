@@ -21,7 +21,7 @@ cargo init --lib        # 初始化为库项目
 
 ### 项目结构
 
-```
+```text
 my-project/
 ├── Cargo.toml            # 项目配置（依赖、元数据等）
 ├── Cargo.lock            # 锁定的依赖版本（提交到版本控制）

@@ -1,0 +1,28 @@
+# .markdownlint.yaml
+# Markdownlint configuration for rust-skills documentation.
+# These docs are code-heavy and contain Chinese text, so some default
+# rules are relaxed accordingly.
+
+default: true
+
+# MD013 - Line length
+# Disable line-length checks inside code blocks and tables; they often
+# contain long shell commands that cannot be wrapped.
+MD013:
+  line_length: 200
+  code_blocks: false
+  tables: false
+
+# MD024 - No duplicate headings
+# Allow duplicate headings when they appear under different parent
+# headings (e.g. multiple "### 安装" sub-sections for different tools).
+MD024:
+  siblings_only: true
+
+# MD033 - Inline HTML
+# Allow inline HTML (e.g. <br>) when needed in docs.
+MD033: false
+
+# MD041 - First line should be a top-level heading
+# All skill files start with an H1, so keep this rule enabled.
+MD041: true

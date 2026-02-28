@@ -96,6 +96,7 @@ cargo test -- --test-threads=1
 ```
 
 Test code structure:
+
 ```rust
 #[cfg(test)]
 mod tests {

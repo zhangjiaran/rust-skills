@@ -99,7 +99,7 @@ fn test_with_result() -> Result<(), Box<dyn std::error::Error>> {
 
 集成测试放在 `tests/` 目录中，每个文件是独立的测试 crate。
 
-```
+```text
 my-project/
 ├── src/
 │   └── lib.rs

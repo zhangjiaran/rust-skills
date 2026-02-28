@@ -328,6 +328,7 @@ rustup component add rust-analyzer
 ```
 
 `rust-analyzer` 提供：
+
 - 实时错误提示
 - 自动补全
 - 跳转到定义

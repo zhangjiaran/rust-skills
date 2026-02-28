@@ -5,7 +5,7 @@
 ## 包含内容
 
 | 文件 | 说明 |
-|------|------|
+| ------ | ------ |
 | [`.github/copilot-instructions.md`](.github/copilot-instructions.md) | GitHub Copilot 自定义指令 |
 | [`.cursorrules`](.cursorrules) | Cursor IDE 规则配置 |
 | [`skills/01-installation.md`](skills/01-installation.md) | Rust 安装与工具链管理 |
