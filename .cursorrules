@@ -1,0 +1,84 @@
+# Cursor Rules for Rust Development
+
+## Language & Framework
+- Language: Rust
+- Build tool: Cargo
+- Edition: Rust 2021 (default for new projects)
+
+## Code Style
+- Run `cargo fmt` before every commit to ensure consistent formatting
+- Run `cargo clippy -- -D warnings` to catch common mistakes
+- Use `rustfmt.toml` for project-specific formatting configuration
+- Prefer `snake_case` for variables and functions, `PascalCase` for types and traits
+- Use `SCREAMING_SNAKE_CASE` for constants and statics
+
+## Error Handling
+- Use `Result<T, E>` for recoverable errors, `panic!` only for unrecoverable states
+- Prefer the `?` operator for error propagation over `unwrap()` or `expect()`
+- Define custom error types using `thiserror` crate for libraries
+- Use `anyhow` crate for application-level error handling
+- Never use `.unwrap()` in production code; use `.expect("descriptive message")` if a panic is acceptable
+
+## Memory & Ownership
+- Prefer borrowing (`&T`, `&mut T`) over cloning unless ownership transfer is required
+- Use `Arc<T>` for shared ownership across threads; `Rc<T>` for single-threaded contexts
+- Use `Mutex<T>` or `RwLock<T>` for interior mutability with thread safety
+- Avoid `unsafe` blocks; document thoroughly when they are unavoidable
+
+## Async Programming
+- Use `tokio` as the async runtime for most applications
+- Use `async`/`await` syntax for asynchronous operations
+- Prefer `tokio::spawn` for concurrent tasks
+- Use `tokio::select!` for racing multiple futures
+
+## Testing
+- Write unit tests in the same file as the code using `#[cfg(test)]` modules
+- Write integration tests in the `tests/` directory
+- Use `#[test]` for unit tests and `#[tokio::test]` for async tests
+- Aim for meaningful test coverage, particularly for public APIs
+- Use `assert_eq!`, `assert_ne!`, `assert!` macros; use `dbg!` during debugging only
+
+## Dependencies
+- Pin dependencies to specific versions in `Cargo.lock` (already done by cargo)
+- Audit dependencies with `cargo audit` regularly
+- Prefer well-maintained crates from crates.io with high download counts
+- Minimize the number of dependencies; use standard library features when possible
+
+## Common Cargo Commands
+```bash
+cargo build           # Build debug
+cargo build --release # Build release
+cargo run             # Run debug
+cargo test            # Run tests
+cargo fmt             # Format code
+cargo clippy          # Lint code
+cargo check           # Type-check without building
+cargo doc --open      # Build and open documentation
+cargo add <crate>     # Add dependency
+cargo update          # Update dependencies
+```
+
+## Project Structure
+```
+my-project/
+├── Cargo.toml         # Package manifest
+├── Cargo.lock         # Locked dependency versions
+├── src/
+│   ├── main.rs        # Binary entry point
+│   ├── lib.rs         # Library root (if applicable)
+│   └── module/
+│       ├── mod.rs     # Module root
+│       └── submodule.rs
+├── tests/
+│   └── integration_test.rs
+├── benches/
+│   └── benchmark.rs
+└── examples/
+    └── example.rs
+```
+
+## Security
+- Run `cargo audit` to check for known vulnerabilities in dependencies
+- Never hardcode secrets or credentials in source code
+- Use environment variables or config files for sensitive configuration
+- Validate all external inputs before processing
