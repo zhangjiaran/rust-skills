@@ -1,3 +1,8 @@
+---
+name: Cargo 构建指南
+description: Cargo 构建系统的使用方法，包括构建配置、Features 条件编译、跨平台编译、工作空间和发布流程。
+---
+
 # Cargo 构建指南 (Cargo Build Guide)
 
 本文档介绍 Cargo 构建系统的使用方法，包括构建配置、跨平台编译、性能优化等。

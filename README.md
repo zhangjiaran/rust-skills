@@ -8,11 +8,11 @@
 | ------ | ------ |
 | [`.github/copilot-instructions.md`](.github/copilot-instructions.md) | GitHub Copilot 自定义指令 |
 | [`.cursorrules`](.cursorrules) | Cursor IDE 规则配置 |
-| [`skills/01-installation.md`](skills/01-installation.md) | Rust 安装与工具链管理 |
-| [`skills/02-development.md`](skills/02-development.md) | Rust 项目开发实践 |
-| [`skills/03-unit-testing.md`](skills/03-unit-testing.md) | 单元测试与集成测试 |
-| [`skills/04-code-check.md`](skills/04-code-check.md) | 代码检查与静态分析 |
-| [`skills/05-cargo-build.md`](skills/05-cargo-build.md) | Cargo 构建与发布 |
+| [`skills/01-installation/SKILL.md`](skills/01-installation/SKILL.md) | Rust 安装与工具链管理 |
+| [`skills/02-development/SKILL.md`](skills/02-development/SKILL.md) | Rust 项目开发实践 |
+| [`skills/03-unit-testing/SKILL.md`](skills/03-unit-testing/SKILL.md) | 单元测试与集成测试 |
+| [`skills/04-code-check/SKILL.md`](skills/04-code-check/SKILL.md) | 代码检查与静态分析 |
+| [`skills/05-cargo-build/SKILL.md`](skills/05-cargo-build/SKILL.md) | Cargo 构建与发布 |
 
 ## 覆盖场景
 
@@ -56,7 +56,7 @@
 在 Cursor Chat 中，可以用 `@file` 引用 `skills/` 目录下的文档，例如：
 
 ```text
-@skills/03-unit-testing.md 帮我为这个函数写单元测试
+@skills/03-unit-testing/SKILL.md 帮我为这个函数写单元测试
 ```
 
 ---
@@ -83,16 +83,16 @@
 **推荐使用方式：**
 
 - **按需引入**：只粘贴与当前任务相关的文档，减少无关上下文干扰  
-  例如：只需要写测试时，粘贴 `skills/03-unit-testing.md`
+  例如：只需要写测试时，粘贴 `skills/03-unit-testing/SKILL.md`
 - **全量引入**：将所有 `skills/` 文档合并后作为系统提示词，适合需要覆盖完整 Rust 工作流的场景
 - **对话开头声明**：在每次新对话开始时，告知 AI "请参考以下 Rust 开发规范" 并附上文档内容
 
 **快速复制命令（合并所有 skills）：**
 
 ```bash
-cat skills/*.md | pbcopy        # macOS
-cat skills/*.md | xclip         # Linux
-cat skills/*.md | clip          # Windows
+cat skills/*/SKILL.md | pbcopy        # macOS
+cat skills/*/SKILL.md | xclip         # Linux
+cat skills/*/SKILL.md | clip          # Windows
 ```
 
 ---
