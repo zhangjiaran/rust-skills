@@ -1,11 +1,26 @@
 ---
-name: Rust 代码检查
-description: Rust 代码格式化、静态分析和安全审计工具的使用方法，包括 rustfmt、Clippy、cargo audit 和 CI 集成。
+name: rust-code-check
+description: Format, lint, and audit Rust code. Use when you need to run rustfmt, clippy, cargo audit, or set up CI/CD code quality checks.
 ---
 
 # Rust 代码检查 (Code Checking & Linting)
 
 本文档介绍如何使用 Rust 工具链进行代码格式化、静态分析和安全审计。
+
+## 辅助脚本
+
+运行完整的代码质量检查流程：
+
+```bash
+python scripts/check_all.py
+```
+
+该脚本会依次运行：
+- 代码格式化检查 (rustfmt)
+- Clippy静态分析
+- 类型检查
+- 单元测试
+- 安全审计 (cargo audit)
 
 ## rustfmt — 代码格式化
 

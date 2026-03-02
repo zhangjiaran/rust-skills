@@ -1,11 +1,15 @@
 ---
-name: Cargo 构建指南
-description: Cargo 构建系统的使用方法，包括构建配置、Features 条件编译、跨平台编译、工作空间和发布流程。
+name: rust-cargo-build
+description: Build Rust projects with Cargo. Use when you need to compile projects, configure build profiles, use features, cross-compile, or manage workspaces.
 ---
 
 # Cargo 构建指南 (Cargo Build Guide)
 
 本文档介绍 Cargo 构建系统的使用方法，包括构建配置、跨平台编译、性能优化等。
+
+## 相关资源
+
+- [跨平台编译指南](references/cross-compilation-guide.md) - 详细的跨平台编译配置和常见问题解决方案
 
 ## 基本构建命令
 

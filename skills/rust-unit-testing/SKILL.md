@@ -1,11 +1,32 @@
 ---
-name: Rust 单元测试
-description: Rust 单元测试、集成测试和文档测试的编写与运行方法，包括异步测试、Mock 和代码覆盖率工具。
+name: rust-unit-testing
+description: Write and run Rust tests. Use when you need to create unit tests, integration tests, doc tests, async tests, mocks, or measure code coverage.
 ---
 
 # Rust 单元测试 (Unit Testing in Rust)
 
 本文档介绍如何在 Rust 中编写和运行单元测试、集成测试及文档测试。
+
+## 辅助脚本
+
+使用测试运行脚本简化测试流程：
+
+```bash
+# 运行所有测试
+python scripts/run_tests.py --all
+
+# 只运行单元测试
+python scripts/run_tests.py --unit
+
+# 只运行集成测试
+python scripts/run_tests.py --integration
+
+# 生成覆盖率报告
+python scripts/run_tests.py --coverage
+
+# 监视模式（文件变化自动运行测试）
+python scripts/run_tests.py --watch
+```
 
 ## 测试基础
 

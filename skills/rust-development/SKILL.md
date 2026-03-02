@@ -1,11 +1,15 @@
 ---
-name: Rust 开发实践
-description: Rust 项目开发的最佳实践，包括项目创建、依赖管理、模块系统、错误处理和异步编程。
+name: rust-development
+description: Rust project development best practices. Use when creating new projects, managing dependencies, organizing modules, handling errors, or implementing async code.
 ---
 
 # Rust 开发实践 (Rust Development Practices)
 
 本文档介绍 Rust 项目开发的最佳实践和常用工作流。
+
+## 相关资源
+
+- [项目模板参考](references/project-templates.md) - 常用项目类型的Cargo.toml模板和结构建议
 
 ## 创建新项目
 

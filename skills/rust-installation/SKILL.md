@@ -1,11 +1,15 @@
 ---
-name: Rust 安装指南
-description: Rust 工具链安装、管理和配置指南，包括 rustup 使用、组件管理、跨平台目标和国内镜像配置。
+name: rust-installation
+description: Install and manage Rust toolchain using rustup. Use when you need to install Rust, manage toolchains, add components, or configure cross-compilation targets.
 ---
 
 # Rust 安装指南 (Rust Installation Guide)
 
 本文档介绍如何安装和管理 Rust 工具链。
+
+## 相关资源
+
+- [镜像配置参考](references/mirror-configuration.md) - 中国大陆用户镜像配置指南
 
 ## 使用 rustup 安装 Rust
 
