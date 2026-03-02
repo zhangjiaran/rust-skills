@@ -1,3 +1,8 @@
+---
+name: Rust 代码检查
+description: Rust 代码格式化、静态分析和安全审计工具的使用方法，包括 rustfmt、Clippy、cargo audit 和 CI 集成。
+---
+
 # Rust 代码检查 (Code Checking & Linting)
 
 本文档介绍如何使用 Rust 工具链进行代码格式化、静态分析和安全审计。

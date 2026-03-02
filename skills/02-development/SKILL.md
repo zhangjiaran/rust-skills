@@ -1,3 +1,8 @@
+---
+name: Rust 开发实践
+description: Rust 项目开发的最佳实践，包括项目创建、依赖管理、模块系统、错误处理和异步编程。
+---
+
 # Rust 开发实践 (Rust Development Practices)
 
 本文档介绍 Rust 项目开发的最佳实践和常用工作流。

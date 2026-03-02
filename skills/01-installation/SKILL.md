@@ -1,3 +1,8 @@
+---
+name: Rust 安装指南
+description: Rust 工具链安装、管理和配置指南，包括 rustup 使用、组件管理、跨平台目标和国内镜像配置。
+---
+
 # Rust 安装指南 (Rust Installation Guide)
 
 本文档介绍如何安装和管理 Rust 工具链。

@@ -1,3 +1,8 @@
+---
+name: Rust 单元测试
+description: Rust 单元测试、集成测试和文档测试的编写与运行方法，包括异步测试、Mock 和代码覆盖率工具。
+---
+
 # Rust 单元测试 (Unit Testing in Rust)
 
 本文档介绍如何在 Rust 中编写和运行单元测试、集成测试及文档测试。
