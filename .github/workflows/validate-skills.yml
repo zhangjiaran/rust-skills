@@ -28,11 +28,11 @@ jobs:
             ".github/copilot-instructions.md"
             ".cursorrules"
             "README.md"
-            "skills/01-installation/SKILL.md"
-            "skills/02-development/SKILL.md"
-            "skills/03-unit-testing/SKILL.md"
-            "skills/04-code-check/SKILL.md"
-            "skills/05-cargo-build/SKILL.md"
+            "skills/rust-installation/SKILL.md"
+            "skills/rust-development/SKILL.md"
+            "skills/rust-unit-testing/SKILL.md"
+            "skills/rust-code-check/SKILL.md"
+            "skills/rust-cargo-build/SKILL.md"
           )
           FAILED=0
           for file in "${REQUIRED_FILES[@]}"; do
