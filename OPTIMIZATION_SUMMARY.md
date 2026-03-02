@@ -1,6 +1,7 @@
 # Rust技能优化总结
 
 ## 优化完成时间
+
 2026-03-02
 
 ## 优化内容
@@ -9,19 +10,21 @@
 
 所有5个技能的SKILL.md文件已按照CodeArts代码智能体标准进行优化:
 
-#### 优化前问题:
+#### 优化前问题
+
 - name字段包含中文和空格
 - description字段过长或不够明确
 - 缺少明确的使用时机说明
 
-#### 优化后改进:
+#### 优化后改进
+
 - **name字段**: 只使用小写字母、数字和连字符,符合64字符限制
 - **description字段**: 使用英文描述,明确说明功能和使用时机,控制在1024字符以内
 
 ### 2. 技能列表
 
 | 技能名称 | 描述 | 用途 |
-|---------|------|------|
+| --------- | ------ | ------ |
 | rust-installation | Install and manage Rust toolchain using rustup | 安装Rust、管理工具链、添加组件、配置跨编译目标 |
 | rust-development | Rust project development best practices | 创建项目、管理依赖、组织模块、错误处理、异步编程 |
 | rust-cargo-build | Build Rust projects with Cargo | 编译项目、配置构建profile、使用features、跨平台编译、管理工作空间 |
@@ -33,35 +36,40 @@
 为每个技能添加了可选的捆绑资源目录,增强功能:
 
 #### rust-installation/
-```
+
+```text
 ├── SKILL.md
 └── references/
     └── mirror-configuration.md  # 中国大陆镜像配置指南
 ```
 
 #### rust-development/
-```
+
+```text
 ├── SKILL.md
 └── references/
     └── project-templates.md  # 项目模板和Cargo.toml配置示例
 ```
 
 #### rust-cargo-build/
-```
+
+```text
 ├── SKILL.md
 └── references/
     └── cross-compilation-guide.md  # 跨平台编译详细配置
 ```
 
 #### rust-code-check/
-```
+
+```text
 ├── SKILL.md
 └── scripts/
     └── check_all.py  # 一键运行所有代码质量检查
 ```
 
 #### rust-unit-testing/
-```
+
+```text
 ├── SKILL.md
 └── scripts/
     └── run_tests.py  # 测试运行辅助脚本
@@ -125,7 +133,7 @@ python scripts/run_tests.py --coverage
 
 ## 技能目录完整结构
 
-```
+```text
 skills/
 ├── rust-cargo-build/
 │   ├── SKILL.md
