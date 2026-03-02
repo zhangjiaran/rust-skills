@@ -16,6 +16,7 @@ python scripts/check_all.py
 ```
 
 该脚本会依次运行：
+
 - 代码格式化检查 (rustfmt)
 - Clippy静态分析
 - 类型检查
