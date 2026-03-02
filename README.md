@@ -8,11 +8,11 @@
 | ------ | ------ |
 | [`.github/copilot-instructions.md`](.github/copilot-instructions.md) | GitHub Copilot 自定义指令 |
 | [`.cursorrules`](.cursorrules) | Cursor IDE 规则配置 |
-| [`skills/01-installation/SKILL.md`](skills/01-installation/SKILL.md) | Rust 安装与工具链管理 |
-| [`skills/02-development/SKILL.md`](skills/02-development/SKILL.md) | Rust 项目开发实践 |
-| [`skills/03-unit-testing/SKILL.md`](skills/03-unit-testing/SKILL.md) | 单元测试与集成测试 |
-| [`skills/04-code-check/SKILL.md`](skills/04-code-check/SKILL.md) | 代码检查与静态分析 |
-| [`skills/05-cargo-build/SKILL.md`](skills/05-cargo-build/SKILL.md) | Cargo 构建与发布 |
+| [`skills/rust-installation/SKILL.md`](skills/rust-installation/SKILL.md) | Rust 安装与工具链管理 |
+| [`skills/rust-development/SKILL.md`](skills/rust-development/SKILL.md) | Rust 项目开发实践 |
+| [`skills/rust-unit-testing/SKILL.md`](skills/rust-unit-testing/SKILL.md) | 单元测试与集成测试 |
+| [`skills/rust-code-check/SKILL.md`](skills/rust-code-check/SKILL.md) | 代码检查与静态分析 |
+| [`skills/rust-cargo-build/SKILL.md`](skills/rust-cargo-build/SKILL.md) | Cargo 构建与发布 |
 
 ## 覆盖场景
 
@@ -56,7 +56,7 @@
 在 Cursor Chat 中，可以用 `@file` 引用 `skills/` 目录下的文档，例如：
 
 ```text
-@skills/03-unit-testing/SKILL.md 帮我为这个函数写单元测试
+@skills/rust-unit-testing/SKILL.md 帮我为这个函数写单元测试
 ```
 
 ---
