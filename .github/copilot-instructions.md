@@ -198,3 +198,138 @@ cargo test --workspace
 # Run a specific workspace member
 cargo run -p my-app
 ```
+
+## Async Programming
+
+When writing async Rust code with Tokio:
+
+```toml
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+```
+
+```rust
+// Async main entry point
+#[tokio::main]
+async fn main() {
+    let result = fetch_data("https://example.com").await;
+    println!("{}", result);
+}
+
+// Run futures concurrently
+let (a, b) = tokio::join!(task_a(), task_b());
+
+// Race futures — use the first to complete
+tokio::select! {
+    result = task_a() => println!("A won: {}", result),
+    result = task_b() => println!("B won: {}", result),
+}
+
+// Spawn a background task
+let handle = tokio::spawn(async { 42 });
+let value = handle.await.unwrap();
+
+// Put blocking/CPU-heavy work on a dedicated thread pool
+let result = tokio::task::spawn_blocking(|| expensive_computation()).await.unwrap();
+```
+
+## Error Handling
+
+When handling errors in Rust:
+
+```toml
+[dependencies]
+thiserror = "2"   # For library error types
+anyhow = "1"      # For application-level error handling
+```
+
+```rust
+// Library code: define precise error types with thiserror
+use thiserror::Error;
+
+#[derive(Debug, Error)]
+pub enum AppError {
+    #[error("IO error: {0}")]
+    Io(#[from] std::io::Error),
+    #[error("User {id} not found")]
+    UserNotFound { id: u32 },
+}
+
+// Application code: use anyhow for flexible error handling
+use anyhow::{bail, Context, Result};
+
+fn run() -> Result<()> {
+    let content = std::fs::read_to_string("config.toml")
+        .context("failed to read config.toml")?;
+    if content.is_empty() {
+        bail!("config file is empty");
+    }
+    Ok(())
+}
+```
+
+## Concurrency
+
+When writing concurrent Rust code:
+
+```rust
+use std::sync::{Arc, Mutex};
+use std::thread;
+
+// Share data across threads with Arc + Mutex
+let counter = Arc::new(Mutex::new(0u32));
+let handles: Vec<_> = (0..10).map(|_| {
+    let c = Arc::clone(&counter);
+    thread::spawn(move || { *c.lock().unwrap() += 1; })
+}).collect();
+for h in handles { h.join().unwrap(); }
+
+// Message passing with channels
+use std::sync::mpsc;
+let (tx, rx) = mpsc::channel::<String>();
+thread::spawn(move || tx.send("hello".into()).unwrap());
+println!("{}", rx.recv().unwrap());
+```
+
+For data-parallel workloads, use Rayon:
+
+```toml
+[dependencies]
+rayon = "1"
+```
+
+```rust
+use rayon::prelude::*;
+// Replace .iter() with .par_iter() to parallelise automatically
+let sum: i64 = (1..=1_000_000i64).into_par_iter().sum();
+```
+
+## CLI Development
+
+When building command-line applications:
+
+```toml
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+```
+
+```rust
+use clap::Parser;
+
+/// My CLI tool
+#[derive(Parser, Debug)]
+#[command(version, about)]
+struct Cli {
+    /// Input file
+    input: String,
+
+    /// Verbose output
+    #[arg(short, long)]
+    verbose: bool,
+}
+
+fn main() {
+    let cli = Cli::parse();
+    println!("input: {}", cli.input);
+}
+```
