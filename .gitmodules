@@ -1,0 +1,21 @@
+[submodule "resources/rust-repos/rustlings"]
+	path = resources/rust-repos/rustlings
+	url = https://github.com/rust-lang/rustlings.git
+[submodule "resources/rust-repos/comprehensive-rust"]
+	path = resources/rust-repos/comprehensive-rust
+	url = https://github.com/google/comprehensive-rust.git
+[submodule "resources/rust-repos/rust-course"]
+	path = resources/rust-repos/rust-course
+	url = https://github.com/sunface/rust-course.git
+[submodule "resources/rust-repos/rust-by-practice"]
+	path = resources/rust-repos/rust-by-practice
+	url = https://github.com/sunface/rust-by-practice.git
+[submodule "resources/rust-repos/100-exercises-to-learn-rust"]
+	path = resources/rust-repos/100-exercises-to-learn-rust
+	url = https://github.com/mainmatter/100-exercises-to-learn-rust.git
+[submodule "resources/rust-repos/awesome-rust"]
+	path = resources/rust-repos/awesome-rust
+	url = https://github.com/rust-unofficial/awesome-rust.git
+[submodule "resources/rust-repos/algorithms-rust"]
+	path = resources/rust-repos/algorithms-rust
+	url = https://github.com/TheAlgorithms/Rust.git

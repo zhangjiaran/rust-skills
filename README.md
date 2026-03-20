@@ -13,6 +13,7 @@
 | [`skills/rust-unit-testing/SKILL.md`](skills/rust-unit-testing/SKILL.md) | 单元测试与集成测试 |
 | [`skills/rust-code-check/SKILL.md`](skills/rust-code-check/SKILL.md) | 代码检查与静态分析 |
 | [`skills/rust-cargo-build/SKILL.md`](skills/rust-cargo-build/SKILL.md) | Cargo 构建与发布 |
+| [`RESOURCES.md`](RESOURCES.md) | 全网精选 Rust 优质代码仓（含 Git 子模块） |
 
 ## 覆盖场景
 
