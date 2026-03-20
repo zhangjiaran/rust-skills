@@ -13,6 +13,10 @@
 | [`skills/rust-unit-testing/SKILL.md`](skills/rust-unit-testing/SKILL.md) | 单元测试与集成测试 |
 | [`skills/rust-code-check/SKILL.md`](skills/rust-code-check/SKILL.md) | 代码检查与静态分析 |
 | [`skills/rust-cargo-build/SKILL.md`](skills/rust-cargo-build/SKILL.md) | Cargo 构建与发布 |
+| [`skills/rust-async/SKILL.md`](skills/rust-async/SKILL.md) | 异步编程（async/await + Tokio） |
+| [`skills/rust-error-handling/SKILL.md`](skills/rust-error-handling/SKILL.md) | 错误处理（thiserror / anyhow） |
+| [`skills/rust-concurrency/SKILL.md`](skills/rust-concurrency/SKILL.md) | 并发编程（线程 / Channel / Arc / Rayon） |
+| [`skills/rust-cli/SKILL.md`](skills/rust-cli/SKILL.md) | CLI 应用开发（Clap） |
 
 ## 覆盖场景
 
@@ -21,6 +25,10 @@
 - **UT 测试**：单元测试、集成测试、文档测试、异步测试、Mock、代码覆盖率
 - **代码检查**：rustfmt 格式化、Clippy Lint、cargo audit 安全审计、CI 集成
 - **Cargo 构建**：构建 Profile、Features、跨平台编译、工作空间、构建脚本、发布
+- **异步编程**：async/await 语法、Tokio 运行时、并发任务、异步 I/O、Channel、超时控制
+- **错误处理**：Result/Option、? 运算符、自定义错误类型、thiserror、anyhow
+- **并发编程**：OS 线程、mpsc Channel、Arc/Mutex/RwLock、原子类型、Rayon 并行迭代器
+- **CLI 开发**：Clap 参数解析、子命令、环境变量、彩色输出、进度条、配置文件
 
 ## 如何使用
 

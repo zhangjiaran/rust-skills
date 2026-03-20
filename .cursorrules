@@ -82,3 +82,18 @@ my-project/
 - Never hardcode secrets or credentials in source code
 - Use environment variables or config files for sensitive configuration
 - Validate all external inputs before processing
+
+## Concurrency
+- Use `Arc<Mutex<T>>` for shared mutable state across threads
+- Use `Arc<RwLock<T>>` when reads are frequent and writes are rare
+- Use `std::sync::mpsc` channels for message passing between threads
+- Use atomic types (`AtomicUsize`, `AtomicBool`, etc.) for simple counters and flags
+- Use `rayon` for data-parallel iteration (`par_iter()` drop-in replacement)
+- Avoid holding a `Mutex` lock across an `.await` point in async code
+
+## CLI Development
+- Use `clap` with `#[derive(Parser)]` for argument parsing in CLI tools
+- Support both `--flag` (long) and `-f` (short) forms for common options
+- Use `clap`'s `env` attribute to allow environment variable overrides
+- Print errors to `stderr` (`eprintln!`) and exit with non-zero code on failure
+- Use `std::process::exit(1)` for error exits; `exit(0)` is implicit on success
